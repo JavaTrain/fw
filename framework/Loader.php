@@ -70,7 +70,6 @@ class Loader
                 return false;
         }
 
-        // the current namespace prefix
         $prefix = $class;
 
         // work backwards through the namespace names of the fully-qualified
