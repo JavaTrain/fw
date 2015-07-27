@@ -2,7 +2,7 @@
 
 namespace Framework\DI;
 
-class Container extends \ArrayObject
+class Service extends \ArrayObject
 {
 
     public function get($key)
@@ -17,7 +17,7 @@ class Container extends \ArrayObject
         if(array_key_exists($key, $classMap)){
 
             $this[$key] = function() use ($classMap, $key) {
-                return new $classMap[$key];
+                return new $classMap[$key]();
             };
 
             return $this->get($key);

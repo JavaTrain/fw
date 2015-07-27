@@ -10,5 +10,6 @@ $req = new \Framework\Request\Request();
 
 $t = $app::$container->get('request');
 //var_dump($t);die;
-echo $t->getUrl();
+var_dump($_SERVER);
+echo $t->getBasePath();
 //$app->run();

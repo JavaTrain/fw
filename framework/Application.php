@@ -1,7 +1,7 @@
 <?php
 namespace Framework;
 
-use Framework\DI\Container;
+use Framework\DI\Service;
 
 class Application{
 
@@ -10,7 +10,7 @@ class Application{
 
     function __construct($config){
 
-        self::$container = new Container();
+        self::$container = new Service();
         $this->config = require($config);
 
         echo 'Application class <br>';
